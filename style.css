@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #546586, #d67aed);
+  color: #000;
+}
+main {
+  width: 90%;
+  padding: 1.5em;
+  border-radius: 3rem;
+  text-align: center;
+  background: #edeef0;
+}
+h1 {
+  margin-bottom: 1em;
+}
+form {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+input {
+  flex: 1;
+  outline: none;
+  background: transparent;
+  margin-right: 1em;
+  padding: 0.75em 1em;
+  border: none;
+  border-bottom: 1px solid black;
+}
+button {
+  background: #d67aed;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 30%;
+  padding: 0.75em 1em;
+  border-radius: 1rem;
+}
+button:hover {
+  cursor: pointer;
+}
+.enter-task {
+  text-align: left;
+  color: #e60303;
+}
+
+ol {
+  list-style-type: none;
+}
+li {
+  margin-bottom: 1em;
+  font-size: 1.2rem;
+  padding: 1.2em;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+li::before {
+  content: "";
+  position: absolute;
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 50%;
+  background-image: url(./images/radio.png);
+  background-size: cover;
+  background-position: center;
+  top: 0.8rem;
+  left: 0.8rem;
+}
+li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+li.checked::before {
+  background-image: url(./images/check.png);
+}
+li span {
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  font-size: 2rem;
+  color: #555;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0.3em;
+}
